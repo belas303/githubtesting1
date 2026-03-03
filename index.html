@@ -1,1 +1,58 @@
-<html><body>Hello World Testing 1</body></html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Story Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            color: #333;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Enter the topic that you want to generate the story</h2>
+
+<input type="text" id="topic" placeholder="Enter topic here..." />
+<button onclick="generateStory()">Submit</button>
+
+<div id="result"></div>
+
+<script>
+function generateStory() {
+    var topic = document.getElementById("topic").value;
+
+    if (topic === "") {
+        document.getElementById("result").innerText =
+            "Please enter a topic first.";
+    } else {
+        document.getElementById("result").innerText =
+            "Great choice! A story about '" + topic + "' will be generated soon!";
+    }
+}
+</script>
+
+</body>
+</html>
